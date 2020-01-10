@@ -22,5 +22,5 @@ jobs:
       # prints: XXXXXXX
 
       - run:
-          name: "What tag?"
+          name: "What tag am I on?"
           command: echo ${CIRCLE_TAG}  # prints: XXXXXXX
