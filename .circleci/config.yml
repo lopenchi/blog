@@ -24,3 +24,13 @@ jobs:
       - run:
           name: "What tag am I on?"
           command: echo ${CIRCLE_TAG}  # prints: XXXXXXX
+
+workflows:
+  version: 2.1
+  tagged-build:
+    jobs:
+      - build:
+          filters:
+            tags:
+              only: /^v.*/
+              
