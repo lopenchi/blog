@@ -1,4 +1,3 @@
----
 version: 2.1
 
 jobs:
@@ -21,9 +20,6 @@ jobs:
       # Run another step, the same as above; note that you can
       # invoke environment variable without curly braces.
       # prints: XXXXXXX
-      - run:
-          name: "What branch am I on now?"
-          command: echo $CIRCLE_BRANCH # prints: XXXXXXX
       - run:
           name: "What tag?"
           command: echo ${CIRCLE_TAG}  # prints: XXXXXXX
